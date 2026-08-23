@@ -15,7 +15,7 @@ export default function Home() {
           <Link href="/" className="flex items-center gap-3">
             <Image src="/portal-logo.png" alt="Portal logo" width={42} height={42} />
             <span className="text-xl font-bold">Portal</span>
-          </a>
+          </Link>
 
           <div className="hidden gap-6 text-sm text-white/60 md:flex">
             <a href="#features" className="hover:text-white">Features</a>

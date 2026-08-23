@@ -35,8 +35,8 @@ Portal is used alongside a person's normal desktop work. Users open services suc
 
 ## Evidence on Hand
 
-- The repository contains the current Portal logo and Windows installation screenshots under `portal-website/public/`.
-- The Help content documents the Windows download, SmartScreen warning, and installation flow.
+- The repository contains the current Portal logo and Windows and macOS installation screenshots under `portal-website/public/`.
+- The Help content documents the Windows SmartScreen and macOS security-warning installation flows.
 - No testimonials, customer logos, benchmarks, case studies, or press claims are currently present and future work must not fabricate them.
 
 ## Product Principles
