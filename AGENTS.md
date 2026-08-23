@@ -31,6 +31,8 @@ Keep this file current. When a confirmed, enduring repository convention or prod
 
 Define release download URLs once in portal-website/src/lib/downloads.ts. Use GitHub's /releases/latest/download/<asset-name> format and never hardcode a release tag such as v1.0.0. Keep the uploaded asset filenames unchanged between releases so the automatic links continue to work.
 
+Portal is currently available for both Windows and macOS. Do not describe the macOS release as unavailable or coming soon.
+
 Do not add a "Back to Portal" link to the Download or Help pages.
 
 Before changing Next.js behavior, read the relevant documentation under `portal-website/node_modules/next/dist/docs/`; this repository uses Next.js 16, whose APIs may differ from older examples.

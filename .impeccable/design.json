@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T01:11:05.4588291+03:00",
+  "title": "Design System: Portal",
+  "extensions": {
+    "colorMeta": {
+      "command-black": {
+        "role": "neutral",
+        "displayName": "Command Black",
+        "canonical": "#07030d",
+        "tonalRamp": ["oklch(15% 0.035 310)", "oklch(25% 0.035 310)", "oklch(35% 0.035 310)", "oklch(47% 0.035 310)", "oklch(60% 0.035 310)", "oklch(72% 0.035 310)", "oklch(84% 0.035 310)", "oklch(95% 0.035 310)"]
+      },
+      "portal-violet": {
+        "role": "primary",
+        "displayName": "Portal Violet",
+        "canonical": "oklch(62.7% 0.265 303.9)",
+        "tonalRamp": ["oklch(15% 0.265 303.9)", "oklch(27% 0.265 303.9)", "oklch(39% 0.265 303.9)", "oklch(51% 0.265 303.9)", "oklch(63% 0.265 303.9)", "oklch(75% 0.265 303.9)", "oklch(86% 0.265 303.9)", "oklch(95% 0.265 303.9)"]
+      },
+      "portal-violet-hover": {
+        "role": "primary",
+        "displayName": "Portal Violet Hover",
+        "canonical": "oklch(71.4% 0.203 305.504)",
+        "tonalRamp": ["oklch(15% 0.203 305.504)", "oklch(27% 0.203 305.504)", "oklch(39% 0.203 305.504)", "oklch(51% 0.203 305.504)", "oklch(63% 0.203 305.504)", "oklch(75% 0.203 305.504)", "oklch(86% 0.203 305.504)", "oklch(95% 0.203 305.504)"]
+      },
+      "portal-violet-deep": {
+        "role": "primary",
+        "displayName": "Portal Violet Deep",
+        "canonical": "oklch(55.8% 0.288 302.321)",
+        "tonalRamp": ["oklch(15% 0.288 302.321)", "oklch(27% 0.288 302.321)", "oklch(39% 0.288 302.321)", "oklch(51% 0.288 302.321)", "oklch(63% 0.288 302.321)", "oklch(75% 0.288 302.321)", "oklch(86% 0.288 302.321)", "oklch(95% 0.288 302.321)"]
+      },
+      "aurora-magenta": {
+        "role": "secondary",
+        "displayName": "Aurora Magenta",
+        "canonical": "oklch(66.7% 0.295 322.15)",
+        "tonalRamp": ["oklch(15% 0.295 322.15)", "oklch(27% 0.295 322.15)", "oklch(39% 0.295 322.15)", "oklch(51% 0.295 322.15)", "oklch(63% 0.295 322.15)", "oklch(75% 0.295 322.15)", "oklch(86% 0.295 322.15)", "oklch(95% 0.295 322.15)"]
+      },
+      "ambient-violet": {
+        "role": "secondary",
+        "displayName": "Ambient Violet",
+        "canonical": "oklch(60.6% 0.25 292.717)",
+        "tonalRamp": ["oklch(15% 0.25 292.717)", "oklch(27% 0.25 292.717)", "oklch(39% 0.25 292.717)", "oklch(51% 0.25 292.717)", "oklch(63% 0.25 292.717)", "oklch(75% 0.25 292.717)", "oklch(86% 0.25 292.717)", "oklch(95% 0.25 292.717)"]
+      },
+      "soft-lilac": {
+        "role": "neutral",
+        "displayName": "Soft Lilac",
+        "canonical": "oklch(94.6% 0.033 307.174)",
+        "tonalRamp": ["oklch(15% 0.033 307.174)", "oklch(27% 0.033 307.174)", "oklch(39% 0.033 307.174)", "oklch(51% 0.033 307.174)", "oklch(63% 0.033 307.174)", "oklch(75% 0.033 307.174)", "oklch(86% 0.033 307.174)", "oklch(95% 0.033 307.174)"]
+      },
+      "neutral-white": {
+        "role": "neutral",
+        "displayName": "Neutral White",
+        "canonical": "#ffffff",
+        "tonalRamp": ["oklch(15% 0 0)", "oklch(27% 0 0)", "oklch(39% 0 0)", "oklch(51% 0 0)", "oklch(63% 0 0)", "oklch(75% 0 0)", "oklch(86% 0 0)", "oklch(100% 0 0)"]
+      },
+      "neutral-black": {
+        "role": "neutral",
+        "displayName": "Neutral Black",
+        "canonical": "#000000",
+        "tonalRamp": ["oklch(0% 0 0)", "oklch(15% 0 0)", "oklch(27% 0 0)", "oklch(39% 0 0)", "oklch(51% 0 0)", "oklch(63% 0 0)", "oklch(79% 0 0)", "oklch(95% 0 0)"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Landing-page hero statements only." },
+      "headline": { "displayName": "Headline", "purpose": "Page titles and major section headings." },
+      "title": { "displayName": "Title", "purpose": "Cards, guide steps, and content-group headings." },
+      "body": { "displayName": "Body", "purpose": "Descriptions and instructional content." },
+      "label": { "displayName": "Label", "purpose": "Navigation, actions, statuses, and section eyebrows." }
+    },
+    "shadows": [
+      { "name": "primary-action-glow", "value": "0 20px 25px -5px rgb(168 85 247 / 0.30), 0 8px 10px -6px rgb(168 85 247 / 0.30)", "purpose": "Broad violet glow under primary actions." },
+      { "name": "step-marker-glow", "value": "0 10px 15px -3px rgb(168 85 247 / 0.25), 0 4px 6px -4px rgb(168 85 247 / 0.25)", "purpose": "Tighter violet glow under numbered guide markers." },
+      { "name": "instructional-lift", "value": "0 25px 50px -12px rgb(0 0 0 / 0.20)", "purpose": "Low black separation for instructional cards." },
+      { "name": "logo-aura", "value": "0 0 35px rgb(168 85 247 / 0.80)", "purpose": "Focused violet aura around the floating Portal logo." }
+    ],
+    "motion": [
+      { "name": "state-transition", "value": "150ms cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Default hover and state response." },
+      { "name": "ambient-glow", "value": "9s-15s cubic-bezier(0.4, 0, 0.2, 1) infinite", "purpose": "Slow translation, scale, and opacity drift for background light." },
+      { "name": "logo-float", "value": "5s cubic-bezier(0.4, 0, 0.2, 1) infinite", "purpose": "Gentle vertical drift and slight rotation for the hero mark." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The dominant download or continuation action.",
+      "html": "<a class=\"ds-button-primary\" href=\"#\">Download</a>",
+      "css": ".ds-button-primary { display: inline-block; background: oklch(62.7% 0.265 303.9); color: #fff; padding: 1rem 2rem; border-radius: 0.75rem; font: 600 1rem/1.5 var(--font-geist-sans, Arial, sans-serif); text-decoration: none; box-shadow: 0 20px 25px -5px rgb(168 85 247 / 0.30), 0 8px 10px -6px rgb(168 85 247 / 0.30); transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-button-primary:hover { background: oklch(71.4% 0.203 305.504); } .ds-button-primary:focus-visible { outline: 2px solid oklch(82.7% 0.119 306.383); outline-offset: 3px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "A quiet supporting action beside the primary control.",
+      "html": "<a class=\"ds-button-secondary\" href=\"#\">Help</a>",
+      "css": ".ds-button-secondary { display: inline-block; background: transparent; color: oklch(94.6% 0.033 307.174); padding: 1rem 2rem; border: 1px solid rgb(192 132 252 / 0.30); border-radius: 0.75rem; font: 600 1rem/1.5 var(--font-geist-sans, Arial, sans-serif); text-decoration: none; transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-button-secondary:hover { background: rgb(168 85 247 / 0.10); } .ds-button-secondary:focus-visible { outline: 2px solid oklch(82.7% 0.119 306.383); outline-offset: 3px; }"
+    },
+    {
+      "name": "Feature Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "A translucent, softly outlined surface for compact product information.",
+      "html": "<article class=\"ds-feature-card\"><h3>Floating Widget</h3><p>Keep your favorite AI tools one click away.</p></article>",
+      "css": ".ds-feature-card { background: rgb(255 255 255 / 0.04); color: #fff; padding: 1.5rem; border: 1px solid rgb(192 132 252 / 0.20); border-radius: 1rem; font-family: var(--font-geist-sans, Arial, sans-serif); transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms cubic-bezier(0.4, 0, 0.2, 1), border-color 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-feature-card h3 { margin: 0; color: oklch(94.6% 0.033 307.174); font-size: 1.25rem; font-weight: 600; } .ds-feature-card p { margin: 0.75rem 0 0; color: rgb(255 255 255 / 0.55); line-height: 1.5; } .ds-feature-card:hover { transform: translateY(-0.25rem); background: rgb(168 85 247 / 0.10); border-color: rgb(192 132 252 / 0.40); } .ds-feature-card:focus-within { outline: 2px solid oklch(82.7% 0.119 306.383); outline-offset: 3px; }"
+    },
+    {
+      "name": "Status Chip",
+      "kind": "chip",
+      "refersTo": "status-chip",
+      "description": "Compact availability information within guide cards.",
+      "html": "<span class=\"ds-status-chip\">Available</span>",
+      "css": ".ds-status-chip { display: inline-block; background: rgb(255 255 255 / 0.06); color: rgb(255 255 255 / 0.50); padding: 0.25rem 0.75rem; border: 1px solid rgb(255 255 255 / 0.10); border-radius: 9999px; font: 500 0.75rem/1rem var(--font-geist-sans, Arial, sans-serif); }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "A translucent fixed command bar with quiet links and a high-contrast download action.",
+      "html": "<nav class=\"ds-nav\"><strong>Portal</strong><span class=\"ds-nav-links\"><a href=\"#features\">Features</a><a href=\"#help\">Help</a></span><a class=\"ds-nav-action\" href=\"#download\">Download</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; background: rgb(7 3 13 / 0.80); color: #fff; padding: 1rem 1.5rem; border-bottom: 1px solid rgb(168 85 247 / 0.20); backdrop-filter: blur(8px); font-family: var(--font-geist-sans, Arial, sans-serif); } .ds-nav-links { display: flex; gap: 1.5rem; } .ds-nav-links a { color: rgb(255 255 255 / 0.60); font-size: 0.875rem; text-decoration: none; transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-nav-links a:hover { color: #fff; } .ds-nav a:focus-visible { outline: 2px solid oklch(82.7% 0.119 306.383); outline-offset: 3px; } .ds-nav-action { background: #fff; color: #000; padding: 0.5rem 1rem; border-radius: 0.5rem; font-size: 0.875rem; font-weight: 600; text-decoration: none; } .ds-nav-action:hover { background: rgb(255 255 255 / 0.90); }"
+    },
+    {
+      "name": "Guide Step",
+      "kind": "custom",
+      "description": "A luminous instructional container led by a circular numbered marker.",
+      "html": "<article class=\"ds-guide-step\"><div class=\"ds-step-heading\"><span class=\"ds-step-marker\">1</span><h3>Download Portal</h3></div><p>Choose the installer for your operating system.</p></article>",
+      "css": ".ds-guide-step { background: rgb(255 255 255 / 0.04); color: #fff; padding: 2rem; border: 1px solid rgb(192 132 252 / 0.20); border-radius: 1rem; box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.20); font-family: var(--font-geist-sans, Arial, sans-serif); } .ds-step-heading { display: flex; align-items: center; gap: 1rem; } .ds-step-heading h3 { margin: 0; color: oklch(94.6% 0.033 307.174); font-size: 1.5rem; font-weight: 600; } .ds-step-marker { display: inline-flex; width: 2.5rem; height: 2.5rem; align-items: center; justify-content: center; flex: none; background: oklch(62.7% 0.265 303.9); color: #fff; border-radius: 9999px; font-weight: 700; box-shadow: 0 10px 15px -3px rgb(168 85 247 / 0.25), 0 4px 6px -4px rgb(168 85 247 / 0.25); } .ds-guide-step p { margin: 1.25rem 0 0 3.5rem; color: rgb(255 255 255 / 0.65); line-height: 1.75; } .ds-guide-step:focus-within { outline: 2px solid oklch(82.7% 0.119 306.383); outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Violet Command Deck",
+    "overview": "Portal is a modern, polished control surface that keeps several AI services close without inheriting the density of an enterprise dashboard. A near-black field creates focus while violet light marks the few places where attention and action matter.\n\nThe interface is softly layered and luminous: translucent panels, fine purple borders, restrained ambient glow, and gentle hover lift create depth without becoming flashy. The result should feel precise and contemporary, never like a gaming/RGB interface or a generic chatbot clone.",
+    "keyCharacteristics": [
+      "Near-black surfaces with a focused violet and magenta light vocabulary.",
+      "Spacious, centered compositions with clear hierarchy and limited simultaneous choices.",
+      "Translucent cards with fine borders rather than opaque dashboard panels.",
+      "Restrained motion that communicates responsiveness without spectacle."
+    ],
+    "rules": [
+      { "name": "The Narrow Spectrum Rule", "body": "Violet and magenta are the only chromatic voices; do not expand the interface into a rainbow or RGB palette.", "section": "colors" },
+      { "name": "The Light, Not Paint Rule", "body": "Accent colors should appear as focused actions, borders, or diffused light rather than large opaque color blocks.", "section": "colors" },
+      { "name": "The One Typeface Rule", "body": "Keep Geist as the visible interface voice; hierarchy comes from disciplined scale and weight, not decorative font switching.", "section": "typography" },
+      { "name": "The Breathing-Room Rule", "body": "Favor a few clearly separated groups over dense collections of controls; Portal is a focused command surface, not a dashboard.", "section": "layout" },
+      { "name": "The Layer Before Shadow Rule", "body": "Establish depth with transparency and borders before adding a shadow; shadows support hierarchy rather than decorating every surface.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do preserve generous spacing, strong hierarchy, and a limited number of simultaneous actions.",
+      "Do use translucent surfaces, fine violet borders, and restrained glow to create softly layered depth.",
+      "Do keep motion smooth and purposeful, such as gentle lift, slow ambient drift, and the floating logo.",
+      "Do maintain clear contrast with white or lilac foregrounds over Command Black."
+    ],
+    "donts": [
+      "Don't turn Portal into a cluttered enterprise dashboard with dense panels, metrics, and competing controls.",
+      "Don't use rainbow gradients, neon RGB accents, or gaming-interface decoration.",
+      "Don't imitate generic chatbot layouts, chat bubbles, or message-composer-first compositions as the brand language.",
+      "Don't cover large regions with opaque purple when a focused action, fine border, or diffused glow can carry the accent."
+    ]
+  }
+}
