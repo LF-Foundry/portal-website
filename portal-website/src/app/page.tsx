@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
           <div className="hidden gap-6 text-sm text-white/60 md:flex">
             <a href="#features" className="hover:text-white">Features</a>
             <a href="#faq" className="hover:text-white">FAQ</a>
+            <Link href="/docs" className="hover:text-white">Help</Link>
             <a href="#contact" className="hover:text-white">Contact</a>
           </div>
 

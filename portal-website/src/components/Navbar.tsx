@@ -1,10 +1,12 @@
+import Link from "next/link";
+
 export default function Navbar() {
   return (
     <nav className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-[#08080a]/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="/" className="text-xl font-bold">
+        <Link href="/" className="text-xl font-bold">
           Portl
-        </a>
+        </Link>
 
         <div className="hidden gap-6 text-sm text-white/60 md:flex">
           <a href="#features" className="hover:text-white">
@@ -16,6 +18,9 @@ export default function Navbar() {
           <a href="#faq" className="hover:text-white">
             FAQ
           </a>
+          <Link href="/docs" className="hover:text-white">
+            Help
+          </Link>
         </div>
 
         <a

@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { WINDOWS_DOWNLOAD_URL } from "@/lib/downloads";
+
 export default function DownloadPage() {
   return (
     <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#07030d] px-6 py-24 text-white">
@@ -7,39 +10,35 @@ export default function DownloadPage() {
       </div>
 
       <section className="relative z-10 w-full max-w-3xl text-center">
-        <a
-          href="/"
-          className="mb-10 inline-block text-sm text-white/50 transition hover:text-white"
-        >
-          ← Back to Portal
-        </a>
-
         <h1 className="text-4xl font-bold md:text-6xl">Download Portal</h1>
         <p className="mx-auto mt-4 max-w-xl text-white/60">
           Choose your operating system to get started.
         </p>
         <div className="mt-10 grid gap-5 sm:grid-cols-2">
-          <a
-            href="https://github.com/AdamLashnuk/Portal/releases/download/v1.0.0/Portal-Setup.exe"
+          <article
             className="rounded-2xl border border-purple-400/20 bg-white/[0.04] p-8 transition hover:-translate-y-1 hover:border-purple-400/50 hover:bg-purple-500/10"
           >
             <h2 className="text-2xl font-semibold text-purple-100">Windows</h2>
             <p className="mt-2 text-sm text-white/50">Download Portal for Windows</p>
-            <div className="mt-6 rounded-xl bg-purple-500 px-5 py-3 font-semibold shadow-lg shadow-purple-500/25">
+            <a
+              href={WINDOWS_DOWNLOAD_URL}
+              className="mt-6 block rounded-xl bg-purple-500 px-5 py-3 font-semibold shadow-lg shadow-purple-500/25 transition hover:bg-purple-400"
+            >
               Download Windows
-            </div>
-          </a>
+            </a>
+            <Link
+              href="/docs/windows-install"
+              className="mt-4 inline-block text-sm font-medium text-purple-300 transition hover:text-purple-200"
+            >
+              View installation guide &rarr;
+            </Link>
+          </article>
 
-          <a
-            href="https://github.com/AdamLashnuk/Portal-MacOS/releases/download/v0.1.0/Portal-macOS-Apple-Silicon.dmg"
-            className="rounded-2xl border border-purple-400/20 bg-white/[0.04] p-8 transition hover:-translate-y-1 hover:border-purple-400/50 hover:bg-purple-500/10"
-          >
+          <article className="rounded-2xl border border-purple-400/20 bg-white/[0.04] p-8 opacity-75">
             <h2 className="text-2xl font-semibold text-purple-100">macOS</h2>
-            <p className="mt-2 text-sm text-white/50">Download Portal for Mac</p>
-            <div className="mt-6 rounded-xl bg-purple-500 px-5 py-3 font-semibold shadow-lg shadow-purple-500/25">
-              Download Mac
-            </div>
-          </a>
+            <p className="mt-2 text-sm text-white/50">The macOS release is not available yet.</p>
+            <div className="mt-6 rounded-xl border border-white/10 px-5 py-3 font-semibold text-white/45">Coming soon</div>
+          </article>
         </div>
       </section>
     </main>
