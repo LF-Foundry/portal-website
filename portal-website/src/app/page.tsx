@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import DownloadActions from "@/components/DownloadActions";
 import { ArrowIcon, LockIcon, WindowStackIcon } from "@/components/Icons";
+import ServiceMarquee from "@/components/ServiceMarquee";
 import Showcase from "@/components/Showcase";
-
-const services = ["ChatGPT", "Claude", "Gemini", "Z.ai", "DeepSeek", "Perplexity"];
+import { featuredPortalServices, portalServices } from "@/data/services";
 
 export default function Home() {
   return (
@@ -16,13 +16,9 @@ export default function Home() {
           <p>Open the AI sites you already use in one focused desktop window—without rebuilding your browser tabs every time.</p>
           <DownloadActions compact />
         </div>
-        <div className="hero-stage__trace" aria-hidden="true"><i /><i /><i /></div>
       </section>
 
-      <section className="service-strip" aria-label="Supported AI services">
-        <p>Official AI websites, brought within reach.</p>
-        <div>{services.map((service) => <span key={service}>{service}</span>)}</div>
-      </section>
+      <ServiceMarquee />
 
       <section className="story" id="details" aria-labelledby="details-title">
         <article className="story-beat story-beat--orchestrate">
@@ -33,9 +29,9 @@ export default function Home() {
           </div>
           <div className="window-map" aria-label="Several AI windows converging into Portal">
             <div className="window-map__sources">
-              {services.slice(0, 3).map((service, index) => (
-                <div className="mini-window" key={service} style={{ "--window-index": index } as React.CSSProperties}>
-                  <span /><span /><span /><strong>{service}</strong>
+              {portalServices.slice(0, 3).map((service, index) => (
+                <div className="mini-window" key={service.name} style={{ "--window-index": index } as React.CSSProperties}>
+                  <span /><span /><span /><strong>{service.name}</strong>
                 </div>
               ))}
             </div>
@@ -54,12 +50,14 @@ export default function Home() {
             <svg className="story-copy__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4zM4 9h16M7 7.5h.01M10 7.5h.01M8 13h8M8 15.5h5" /></svg>
             <h2>The sites you already know.</h2>
             <p>Portal loads the official services directly. Sign in where you normally sign in and use each product’s familiar interface—inside a calmer desktop workflow.</p>
-            <Link className="text-link" href="/help">See how Portal installs <ArrowIcon /></Link>
           </div>
           <div className="site-stack" aria-label="Official AI service interfaces inside Portal">
-            {services.slice(0, 4).map((service, index) => (
-              <div key={service} style={{ "--stack-index": index } as React.CSSProperties}>
-                <span>{service.slice(0, 1)}</span><strong>{service}</strong><small>Official website</small>
+            {featuredPortalServices.map((service, index) => (
+              <div key={service.name} style={{ "--stack-index": index } as React.CSSProperties}>
+                <span className="site-stack__logo" aria-hidden="true">
+                  <Image src={service.logo} alt="" width={22} height={22} unoptimized />
+                </span>
+                <strong>{service.name}</strong><small>Official website</small>
               </div>
             ))}
           </div>
@@ -81,11 +79,6 @@ export default function Home() {
             </div>
           </div>
         </article>
-      </section>
-
-      <section className="download-close" aria-labelledby="download-title">
-        <div><h2 id="download-title">Bring every AI within reach.</h2><p>Portal is available now for Windows and Apple-silicon Macs.</p></div>
-        <DownloadActions />
       </section>
 
       <section className="faq-section" id="faq" aria-labelledby="faq-title">
