@@ -1,12 +1,10 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { portalShowcase } from "@/data/showcase";
 
 export default function Showcase() {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [status, setStatus] = useState<"loading" | "ready" | "playing" | "paused" | "error">("loading");
-
   useEffect(() => {
     const video = videoRef.current;
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -15,7 +13,7 @@ export default function Showcase() {
       return;
     }
 
-    video.play().catch(() => setStatus("ready"));
+    video.play().catch(() => undefined);
   }, []);
 
   return (
@@ -29,23 +27,12 @@ export default function Showcase() {
         playsInline
         poster={portalShowcase.poster}
         preload="metadata"
-        onCanPlay={() => setStatus("ready")}
-        onError={() => setStatus("error")}
-        onPause={() => setStatus("paused")}
-        onPlay={() => setStatus("playing")}
       >
         {portalShowcase.sources.map((source) => (
           <source key={source.src} src={source.src} type={source.type} />
         ))}
         Your browser does not support the Portal showcase video.
       </video>
-      <figcaption className="showcase__caption">
-        <span className={`showcase__pulse showcase__pulse--${status}`} aria-hidden="true" />
-        {status === "error" ? "Preview unavailable" : portalShowcase.title}
-      </figcaption>
-      <div className="showcase__services" aria-hidden="true">
-        <span>ChatGPT</span><span>Claude</span><span>Gemini</span>
-      </div>
     </figure>
   );
 }

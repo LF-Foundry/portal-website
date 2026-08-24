@@ -11,8 +11,8 @@ export default function Navbar() {
           <span>Portal</span>
         </Link>
         <div className="site-nav__links">
-          <Link href="/#product">Product</Link>
-          <Link href="/#details">Details</Link>
+          <Link href="/#home">Home</Link>
+          <Link href="/#features">Features</Link>
           <Link href="/help">Help</Link>
         </div>
         <Link href="/download" className="nav-download">

@@ -2,17 +2,18 @@ import Image from "next/image";
 import { portalServices } from "@/data/services";
 
 type ServiceLogoGroupProps = {
-  duplicate?: boolean;
+  hidden?: boolean;
+  groupIndex: number;
 };
 
-function ServiceLogoGroup({ duplicate = false }: ServiceLogoGroupProps) {
+function ServiceLogoGroup({ hidden = false, groupIndex }: ServiceLogoGroupProps) {
   return (
-    <ul className="service-marquee__group" aria-hidden={duplicate || undefined}>
+    <ul className="service-marquee__group" aria-hidden={hidden || undefined}>
       {portalServices.map((service) => (
-        <li className="service-marquee__item" key={service.name} title={service.name}>
+        <li className="service-marquee__item" key={`${groupIndex}-${service.name}`} title={service.name}>
           <Image
             src={service.logo}
-            alt={duplicate ? "" : `${service.name} logo`}
+            alt={hidden ? "" : `${service.name} logo`}
             width={30}
             height={30}
             unoptimized
@@ -28,8 +29,13 @@ export default function ServiceMarquee() {
     <section className="service-strip" aria-label="AI services available in Portal">
       <div className="service-marquee">
         <div className="service-marquee__track">
-          <ServiceLogoGroup />
-          <ServiceLogoGroup duplicate />
+          {[0, 1, 2, 3].map((groupIndex) => (
+            <ServiceLogoGroup
+              hidden={groupIndex > 0}
+              groupIndex={groupIndex}
+              key={groupIndex}
+            />
+          ))}
         </div>
       </div>
     </section>
