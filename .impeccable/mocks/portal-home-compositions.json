@@ -1,0 +1,41 @@
+{
+  "title": "Choose the homepage composition",
+  "question": "The Window Choreographer identity is fixed. Choose the composition that should govern Portal's homepage, or use the note field to request a precise combination or revision.",
+  "options": [
+    {
+      "id": "convergence-canvas",
+      "label": "Convergence Canvas",
+      "kicker": "CONFIRMED DIRECTION COMP",
+      "lineage": "spatial desktop window choreography",
+      "thesis": "A direct headline and platform actions introduce a large film stage where three AI windows converge into Portal.",
+      "palette": ["#0b0b0f", "#f5f2ff", "#7c3aed", "#c4b5fd"],
+      "materials": ["frosted desktop panes", "precise window chrome", "soft cursor trails"],
+      "viewport": "The headline and downloads lead, followed immediately by the dominant ultrawide product film.",
+      "risk": "The clearest hierarchy is also the most familiar software-marketing composition.",
+      "comp": ".impeccable/mocks/decision/model-pick.png"
+    },
+    {
+      "id": "immersive-panorama",
+      "label": "Immersive Panorama",
+      "lineage": "full-screen desktop workspaces",
+      "thesis": "The product film owns the first viewport while a compact copy dock keeps the download decision close.",
+      "palette": ["#0b0b0f", "#f5f2ff", "#7c3aed", "#c4b5fd"],
+      "materials": ["frosted desktop panes", "precise window chrome", "soft cursor trails"],
+      "viewport": "An edge-to-edge showcase stage carries the Portal mechanism, with copy and actions floating quietly over it.",
+      "risk": "The product proof is strongest, but the headline can lose authority if the stage becomes too cinematic.",
+      "comp": ".impeccable/mocks/portal-home-panorama.png"
+    },
+    {
+      "id": "docked-command-stage",
+      "label": "Docked Command Stage",
+      "lineage": "desktop docks and command surfaces",
+      "thesis": "A persistent service rail makes switching tangible while the product film remains the largest working region.",
+      "palette": ["#0b0b0f", "#f5f2ff", "#7c3aed", "#c4b5fd"],
+      "materials": ["frosted desktop panes", "precise window chrome", "soft cursor trails"],
+      "viewport": "A slim service dock anchors the left edge, the film fills the workspace, and the action strip sits directly beneath it.",
+      "risk": "The desktop metaphor is strongest, but the rail must not make a marketing page feel like an admin dashboard.",
+      "comp": ".impeccable/mocks/portal-home-docked.png"
+    }
+  ],
+  "steer": true
+}

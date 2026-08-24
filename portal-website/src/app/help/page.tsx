@@ -1,8 +1,26 @@
 import type { Metadata } from "next";
 import { GuideCard, HelpHeader, HelpShell } from "@/components/Help";
 
-export const metadata: Metadata = { title: "Help | Portal", description: "Find installation guides and help for Portal." };
+export const metadata: Metadata = {
+  title: "Help",
+  description: "Installation guides and practical help for Portal.",
+};
 
 export default function HelpPage() {
-  return <HelpShell><HelpHeader title="How can we help?" description="Find installation guides and helpful information for getting started with Portal. More guides will be added here as Portal expands." /><section className="mt-14"><p className="text-sm font-semibold uppercase tracking-[0.2em] text-purple-300">Getting started</p><h2 className="mt-2 text-3xl font-bold tracking-tight">Installation guides</h2><div className="mt-7 grid gap-5 md:grid-cols-2"><GuideCard title="Install on Windows" description="Learn how to download Portal and safely continue through the Windows SmartScreen warning." href="/help/windows-install" status="Available" /><GuideCard title="Install on macOS" description="Learn how to install Portal and safely continue through the macOS security warning." href="/help/macos-install" status="Available" /></div></section><section className="mt-12"><p className="text-sm font-semibold uppercase tracking-[0.2em] text-purple-300">More help</p><div className="mt-4"><GuideCard title="Troubleshooting" description="Common questions and fixes for downloading, installing, and using Portal will be collected here." status="Coming soon" /></div></section></HelpShell>;
+  return (
+    <HelpShell>
+      <HelpHeader title="Get Portal running." description="Clear, step-by-step guidance for downloading and installing Portal on Windows or macOS." />
+      <section className="help-section" aria-labelledby="install-guides-title">
+        <div className="section-heading"><h2 id="install-guides-title">Installation guides</h2><p>Start with the guide for your computer.</p></div>
+        <div className="guide-list">
+          <GuideCard title="Install on Windows" description="Download Portal, open the installer, and safely continue through Microsoft Defender SmartScreen." href="/help/windows-install" status="5 steps" />
+          <GuideCard title="Install on macOS" description="Install Portal on an Apple-silicon Mac and safely continue through the macOS security prompt." href="/help/macos-install" status="5 steps" />
+        </div>
+      </section>
+      <section className="help-section help-section--quiet" aria-labelledby="more-help-title">
+        <div className="section-heading"><h2 id="more-help-title">More help</h2><p>More troubleshooting guidance will be added as Portal grows.</p></div>
+        <GuideCard title="Troubleshooting" description="Common answers for downloading, signing in, and using Portal are being prepared." status="Coming soon" />
+      </section>
+    </HelpShell>
+  );
 }

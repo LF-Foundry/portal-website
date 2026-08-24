@@ -1,0 +1,155 @@
+{
+  "title": "Choose Portal's new visual world",
+  "question": "Portal needs to make its floating multi-AI desktop workflow instantly understandable. Choose the direction that should carry into the full redesign brief.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "The Optical Switchboard",
+      "kicker": "THE ROLL",
+      "lineage": "precision optical benches and lens calibration plates",
+      "thesis": "Portal becomes the instrument that brings several official AI services into one focused desktop view.",
+      "palette": ["#eeede9", "#17171a", "#7c3aed", "#b9a4ff", "#5367a5"],
+      "materials": ["brushed aluminum", "ground glass", "engraved calibration marks"],
+      "viewport": "A full-width ultrawide product film sits inside a calibrated glass stage while a large violet aperture selects the AI service.",
+      "risk": "The instrument language can feel clinical if copy and controls become too technical.",
+      "raised": [
+        {
+          "from": "challenger-brine",
+          "raise": "Proof unfolds in visible, named stages instead of a generic feature list."
+        },
+        {
+          "from": "challenger-ink",
+          "raise": "One responsive refraction field carries motion while the rest of the page stays composed."
+        },
+        {
+          "from": "challenger-nixie",
+          "raise": "Selected services and download states read as tangible active states."
+        },
+        {
+          "from": "challenger-woodblock",
+          "raise": "Layers register in sequence so every reveal explains structure."
+        },
+        {
+          "from": "challenger-stickers",
+          "raise": "Controlled overlap demonstrates browser-tab consolidation without visual clutter."
+        }
+      ],
+      "comp": ".impeccable/mocks/decision/assigned.png"
+    },
+    {
+      "id": "model-pick",
+      "label": "The Window Choreographer",
+      "kicker": "IMPECCABLE'S PICK",
+      "lineage": "desktop window managers and spatial workspace switchers",
+      "thesis": "The page choreographs multiple official AI windows around one always-close Portal surface.",
+      "palette": ["#0b0b0f", "#f5f2ff", "#7c3aed", "#c4b5fd"],
+      "materials": ["frosted desktop panes", "precise window chrome", "soft cursor trails"],
+      "viewport": "The real showcase film fills a desktop canvas while compact AI windows collapse into the Portal widget around it.",
+      "risk": "It is the clearest option, but also the closest to familiar desktop-software marketing.",
+      "comp": ".impeccable/mocks/decision/model-pick.png"
+    },
+    {
+      "id": "challenger-horizon",
+      "label": "The Event Horizon",
+      "verdict": "competitive",
+      "lineage": "a black-hole accretion disk at the edge of disappearance",
+      "thesis": "Portal is a controlled gravitational center that pulls scattered AI tabs into one reachable orbit.",
+      "palette": ["#030305", "#eaf0ff", "#8b5cf6", "#ffb74d", "#d94b64"],
+      "materials": ["warped light rings", "hairline orbital diagrams", "stardust grain"],
+      "viewport": "A monumental portal ring bends the ultrawide film across the fold while service names orbit as selectable destinations.",
+      "case": "Strong audience identification and memorable motion; weaker product clarity because spectacle can outrun the desktop utility.",
+      "risk": "It can slip into generic sci-fi or gaming language if the product film stops leading.",
+      "comp": ".impeccable/mocks/decision/challenger-horizon.png",
+      "hero": "https://impeccable.style/worlds/cards/galaxies-nebulae-deep-time-accretion-disk-threshold-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/galaxies-nebulae-deep-time-accretion-disk-threshold.webp"
+    },
+    {
+      "id": "challenger-brine",
+      "label": "The Batch Shelf",
+      "verdict": "declined",
+      "lineage": "a seasonal pickling-brine calendar",
+      "thesis": "Each Portal capability matures through clearly labeled stages on a working shelf.",
+      "palette": ["#f2eee2", "#d85e58", "#7c2535", "#628451", "#8b6841"],
+      "materials": ["clear jar glass", "brine haze", "kraft labels"],
+      "viewport": "A seasonal shelf turns services and setup steps into a collection of labeled vessels.",
+      "case": "The progression system is clear, but food craft has no credible relationship to desktop AI work.",
+      "risk": "The metaphor would distract from the product rather than explain it.",
+      "kept": "Named progress stages strengthen installation guides.",
+      "hero": "https://impeccable.style/worlds/cards/food-fermentation-culinary-theater-pickling-brine-calendar-hero.webp"
+    },
+    {
+      "id": "challenger-ink",
+      "label": "The Fluid Basin",
+      "verdict": "declined",
+      "lineage": "a shallow basin of suminagashi ink",
+      "thesis": "Portal's movement becomes one continuous field of responsive ink and current.",
+      "palette": ["#f5f3ea", "#14171b", "#253d75", "#777b86"],
+      "materials": ["sumi ink", "paper-white water", "feathered currents"],
+      "viewport": "The showcase film rests beside an interactive marbling field that responds to the visitor's pointer.",
+      "case": "The motion is distinctive, but marbling does not identify the multi-service desktop workflow.",
+      "risk": "The interaction becomes decorative atmosphere instead of product proof.",
+      "kept": "One orchestrated responsive material should carry the motion system.",
+      "hero": "https://impeccable.style/worlds/cards/medium-native-fluid-ink-basin-hero.webp"
+    },
+    {
+      "id": "challenger-nixie",
+      "label": "The Live Counter",
+      "verdict": "declined",
+      "lineage": "a nixie-tube laboratory counter",
+      "thesis": "Every selected service arrives as a visible change of physical state inside a desktop instrument.",
+      "palette": ["#0b0c0d", "#f58a32", "#30251f", "#afb0ae"],
+      "materials": ["clear glass envelopes", "blackened steel", "orange plasma"],
+      "viewport": "Portal's service choices occupy a bank of glowing physical indicators below the product film.",
+      "case": "The active states are excellent, but quantities and retro electronics do not explain Portal's core task.",
+      "risk": "A nostalgic instrument aesthetic would overcomplicate a simple utility.",
+      "kept": "Controls need unmistakable, tactile active states.",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-nixie-laboratory-counter-hero.webp"
+    },
+    {
+      "id": "challenger-woodblock",
+      "label": "The Registered Print",
+      "verdict": "declined",
+      "lineage": "a folk woodblock print on crushed-shell paper",
+      "thesis": "Portal's story prints layer by layer until one complete desktop workflow comes into register.",
+      "palette": ["#ede6cf", "#c44232", "#d9ad31", "#356a55", "#292629"],
+      "materials": ["crushed-shell paper", "mineral pigment", "black keyblock"],
+      "viewport": "A centered Portal mark and product film assemble in separate color layers across a shimmering paper field.",
+      "case": "The craft is memorable, but the print language weakens identification with modern desktop software.",
+      "risk": "The visual world could turn Portal into a cultural poster instead of a useful product.",
+      "kept": "Layered reveals should register in a deliberate explanatory sequence.",
+      "hero": "https://impeccable.style/worlds/cards/posters-covers-sleeves-dong-ho-shell-ground-hero.webp"
+    },
+    {
+      "id": "challenger-stickers",
+      "label": "The Tool Case",
+      "verdict": "declined",
+      "lineage": "a road case buried under layered stickers",
+      "thesis": "The AI tools accumulated across a workday become a visible stack that Portal compresses into order.",
+      "palette": ["#171719", "#f1e3c8", "#ff4f77", "#31b7a3", "#7357d9"],
+      "materials": ["die-cut vinyl", "scuffed case laminate", "torn adhesive edges"],
+      "viewport": "Overlapping service labels peel away to reveal the clean Portal widget and showcase film beneath.",
+      "case": "The tool accumulation is recognizable, but its clutter contradicts Portal's unobtrusive purpose.",
+      "risk": "The page would feel noisy and youthful where the product promises focus.",
+      "kept": "Controlled overlap can demonstrate browser-tab consolidation.",
+      "hero": "https://impeccable.style/worlds/cards/vernacular-ephemera-layered-sticker-accretion-hero.webp"
+    }
+  ],
+  "reroll": {
+    "registers": ["safer", "bolder"]
+  },
+  "buildPath": {
+    "value": "comp",
+    "toggle": true
+  },
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "A polished dark desktop-software landing page that keeps every interaction familiar.",
+    "palette": ["#07030d", "#ffffff", "#a855f7", "#d8b4fe"],
+    "materials": ["soft gradient glow", "glass cards", "clean product media"],
+    "viewport": "A centered headline and Download button sit above the showcase film, followed by a feature-card grid.",
+    "risk": "It is easy to understand and equally easy to confuse with another AI product website.",
+    "comp": ".impeccable/mocks/decision/canon.png"
+  },
+  "steer": true
+}
