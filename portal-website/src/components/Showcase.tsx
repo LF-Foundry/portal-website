@@ -17,10 +17,11 @@ export default function Showcase() {
   }, []);
 
   return (
-    <figure className="showcase" aria-label={portalShowcase.description}>
+    <div className="showcase">
       <video
         ref={videoRef}
         className="showcase__video"
+        aria-label={portalShowcase.description}
         controls
         loop
         muted
@@ -33,6 +34,6 @@ export default function Showcase() {
         ))}
         Your browser does not support the Portal showcase video.
       </video>
-    </figure>
+    </div>
   );
 }

@@ -33,6 +33,8 @@ Define release download URLs once in portal-website/src/lib/downloads.ts. Use Gi
 
 Portal is currently available for both Windows and macOS. Do not describe the macOS release as unavailable or coming soon.
 
+Style every download button as the same neutral black/gray control regardless of platform. Keep the violet palette deep and dark rather than bright lavender.
+
 Do not add a "Back to Portal" link to the Download or Help pages.
 
 Before changing Next.js behavior, read the relevant documentation under `portal-website/node_modules/next/dist/docs/`; this repository uses Next.js 16, whose APIs may differ from older examples.

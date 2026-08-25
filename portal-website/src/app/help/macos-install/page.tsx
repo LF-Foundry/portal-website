@@ -20,12 +20,12 @@ export default function MacOSInstallPage() {
         <aside className="guide-toc">
           <p>In this guide</p>
           <ol>{steps.map((step, index) => <li key={step}><a href={`#step-${index + 1}`}><span>{index + 1}</span>{step}</a></li>)}</ol>
-          <a className="button button--primary" href={MACOS_DOWNLOAD_URL}>Download <DownloadIcon /></a>
+          <a className="button button--secondary" href={MACOS_DOWNLOAD_URL}>Download <DownloadIcon /></a>
         </aside>
         <ol className="guide-steps">
           <GuideStep number="1" title="Download Portal">
             <p>Select the macOS download below, or open the Portal download page and choose macOS.</p>
-            <div className="guide-actions"><a className="button button--primary" href={MACOS_DOWNLOAD_URL}>Download for macOS <DownloadIcon /></a><Link className="button button--secondary" href="/download">View download page</Link></div>
+            <div className="guide-actions"><a className="button button--secondary" href={MACOS_DOWNLOAD_URL}>Download for macOS <DownloadIcon /></a><Link className="button button--secondary" href="/download">View download page</Link></div>
           </GuideStep>
           <GuideStep number="2" title="Install and open Portal"><p>Open the downloaded DMG, drag Portal into Applications, then open Portal. If macOS blocks it, continue to the next step.</p></GuideStep>
           <GuideStep number="3" title="Open Privacy & Security">

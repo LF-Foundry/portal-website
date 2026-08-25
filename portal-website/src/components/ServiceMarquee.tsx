@@ -3,14 +3,13 @@ import { portalServices } from "@/data/services";
 
 type ServiceLogoGroupProps = {
   hidden?: boolean;
-  groupIndex: number;
 };
 
-function ServiceLogoGroup({ hidden = false, groupIndex }: ServiceLogoGroupProps) {
+function ServiceLogoGroup({ hidden = false }: ServiceLogoGroupProps) {
   return (
     <ul className="service-marquee__group" aria-hidden={hidden || undefined}>
       {portalServices.map((service) => (
-        <li className="service-marquee__item" key={`${groupIndex}-${service.name}`} title={service.name}>
+        <li className="service-marquee__item" key={service.name} title={service.name}>
           <Image
             src={service.logo}
             alt={hidden ? "" : `${service.name} logo`}
@@ -32,7 +31,6 @@ export default function ServiceMarquee() {
           {[0, 1, 2, 3].map((groupIndex) => (
             <ServiceLogoGroup
               hidden={groupIndex > 0}
-              groupIndex={groupIndex}
               key={groupIndex}
             />
           ))}

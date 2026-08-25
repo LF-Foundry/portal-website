@@ -20,12 +20,12 @@ export default function WindowsInstallPage() {
         <aside className="guide-toc">
           <p>In this guide</p>
           <ol>{steps.map((step, index) => <li key={step}><a href={`#step-${index + 1}`}><span>{index + 1}</span>{step}</a></li>)}</ol>
-          <a className="button button--primary" href={WINDOWS_DOWNLOAD_URL}>Download <DownloadIcon /></a>
+          <a className="button button--secondary" href={WINDOWS_DOWNLOAD_URL}>Download <DownloadIcon /></a>
         </aside>
         <ol className="guide-steps">
           <GuideStep number="1" title="Download Portal">
             <p>Select the Windows download below, or open the Portal download page and choose Windows.</p>
-            <div className="guide-actions"><a className="button button--primary" href={WINDOWS_DOWNLOAD_URL}>Download for Windows <DownloadIcon /></a><Link className="button button--secondary" href="/download">View download page</Link></div>
+            <div className="guide-actions"><a className="button button--secondary" href={WINDOWS_DOWNLOAD_URL}>Download for Windows <DownloadIcon /></a><Link className="button button--secondary" href="/download">View download page</Link></div>
           </GuideStep>
           <GuideStep number="2" title="Open the installer"><p>When the download finishes, open <strong>Portal-Setup.exe</strong> from your browser’s downloads or Downloads folder.</p></GuideStep>
           <GuideStep number="3" title="Select More info">

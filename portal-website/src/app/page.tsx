@@ -11,15 +11,13 @@ export default function Home() {
   return (
     <main className="home-page">
       <section className="hero-stage" id="home" aria-labelledby="hero-title">
-        <div className="hero-stage__media"><Showcase /></div>
         <div className="hero-copy">
           <h1 id="hero-title">Every AI.<br />One Portal.</h1>
           <p>Open the AI sites you already use in one focused desktop window—without rebuilding your browser tabs every time.</p>
           <DownloadActions compact />
         </div>
+        <div className="hero-stage__media"><Showcase /></div>
       </section>
-
-      <ServiceMarquee />
 
       <section className="story" id="features" aria-labelledby="features-title">
         <article className="story-beat story-beat--orchestrate">
@@ -29,8 +27,8 @@ export default function Home() {
           </div>
           <div className="window-map" aria-label="Several AI windows converging into Portal">
             <div className="window-map__sources">
-              {portalServices.slice(0, 3).map((service, index) => (
-                <div className="mini-window" key={service.name} style={{ "--window-index": index } as React.CSSProperties}>
+              {portalServices.slice(0, 3).map((service) => (
+                <div className="mini-window" key={service.name}>
                   <span /><span /><span /><strong>{service.name}</strong>
                 </div>
               ))}
@@ -44,6 +42,8 @@ export default function Home() {
             </div>
           </div>
         </article>
+
+        <ServiceMarquee />
 
         <article className="story-beat story-beat--reverse">
           <div className="story-copy">

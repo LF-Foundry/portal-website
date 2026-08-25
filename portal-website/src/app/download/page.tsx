@@ -43,7 +43,7 @@ export default function DownloadPage() {
               <p>{description}</p>
             </div>
             <div className="platform-row__actions">
-              <a className="button button--primary" href={downloadHref}>Download <DownloadIcon /></a>
+              <a className="button button--secondary" href={downloadHref}>Download <DownloadIcon /></a>
               <Link className="text-link" href={guideHref}>Installation guide <ArrowIcon /></Link>
             </div>
           </article>

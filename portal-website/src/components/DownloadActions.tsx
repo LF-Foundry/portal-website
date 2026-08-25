@@ -4,7 +4,7 @@ import { MACOS_DOWNLOAD_URL, WINDOWS_DOWNLOAD_URL } from "@/lib/downloads";
 export default function DownloadActions({ compact = false }: { compact?: boolean }) {
   return (
     <div className={`download-actions${compact ? " download-actions--compact" : ""}`}>
-      <a className="download-action download-action--primary" href={WINDOWS_DOWNLOAD_URL}>
+      <a className="download-action" href={WINDOWS_DOWNLOAD_URL}>
         <WindowsIcon />
         <span><small>Download for</small>Windows</span>
         <DownloadIcon className="download-action__end" />
@@ -17,4 +17,3 @@ export default function DownloadActions({ compact = false }: { compact?: boolean
     </div>
   );
 }
-
