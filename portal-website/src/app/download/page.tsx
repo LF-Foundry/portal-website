@@ -6,6 +6,9 @@ import { MACOS_DOWNLOAD_URL, WINDOWS_DOWNLOAD_URL } from "@/lib/downloads";
 export const metadata: Metadata = {
   title: "Download",
   description: "Download Portal for Windows or Apple-silicon Macs.",
+  alternates: {
+    canonical: "/download",
+  },
 };
 
 const platforms = [

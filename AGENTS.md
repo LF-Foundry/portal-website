@@ -31,6 +31,8 @@ Keep this file current. When a confirmed, enduring repository convention or prod
 
 Define release download URLs once in portal-website/src/lib/downloads.ts. Use GitHub's /releases/latest/download/<asset-name> format and never hardcode a release tag such as v1.0.0. Keep the uploaded asset filenames unchanged between releases so the automatic links continue to work.
 
+Define the production website URL once in portal-website/src/lib/site.ts. Reuse it for canonical metadata, sitemap entries, robots.txt, and other absolute website URLs so they consistently use https://useprtl.com.
+
 Portal is currently available for both Windows and macOS. Do not describe the macOS release as unavailable or coming soon.
 
 Style every download button as the same neutral black/gray control regardless of platform. Keep the violet palette deep and dark rather than bright lavender.

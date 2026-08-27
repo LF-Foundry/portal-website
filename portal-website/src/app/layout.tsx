@@ -3,6 +3,7 @@ import { Archivo } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const archivo = Archivo({
@@ -11,12 +12,16 @@ const archivo = Archivo({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Portal — Every AI, one window",
     template: "%s — Portal",
   },
   description:
     "Open ChatGPT, Claude, Gemini, and more from one focused desktop window for Windows and macOS.",
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({

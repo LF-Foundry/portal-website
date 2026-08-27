@@ -8,6 +8,9 @@ import { WINDOWS_DOWNLOAD_URL } from "@/lib/downloads";
 export const metadata: Metadata = {
   title: "Install on Windows",
   description: "Download and install Portal for Windows.",
+  alternates: {
+    canonical: "/help/windows-install",
+  },
 };
 
 const steps = ["Download Portal", "Open the installer", "Select More info", "Select Run anyway", "Finish setup"];

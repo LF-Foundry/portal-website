@@ -8,6 +8,9 @@ import { MACOS_DOWNLOAD_URL } from "@/lib/downloads";
 export const metadata: Metadata = {
   title: "Install on macOS",
   description: "Download and install Portal for an Apple-silicon Mac.",
+  alternates: {
+    canonical: "/help/macos-install",
+  },
 };
 
 const steps = ["Download Portal", "Install and open", "Open Privacy & Security", "Select Open Anyway", "Confirm and finish"];

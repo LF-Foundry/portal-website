@@ -4,6 +4,9 @@ import { GuideCard, HelpHeader, HelpShell } from "@/components/Help";
 export const metadata: Metadata = {
   title: "Help",
   description: "Installation guides and practical help for Portal.",
+  alternates: {
+    canonical: "/help",
+  },
 };
 
 export default function HelpPage() {

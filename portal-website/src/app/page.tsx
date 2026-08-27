@@ -13,7 +13,7 @@ export default function Home() {
       <section className="hero-stage" id="home" aria-labelledby="hero-title">
         <div className="hero-copy">
           <h1 id="hero-title">Every AI.<br />One Portal.</h1>
-          <p>Open the AI sites you already use in one focused desktop window—without rebuilding your browser tabs every time.</p>
+          <p>Use ChatGPT, Claude, Gemini, and more in one customizable desktop workspace built for Windows and macOS.</p>
           <DownloadActions compact />
         </div>
         <div className="hero-stage__media"><Showcase /></div>
