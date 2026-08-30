@@ -5,6 +5,10 @@ type ServiceLogoGroupProps = {
   hidden?: boolean;
 };
 
+type ServiceMarqueeProps = {
+  reveal?: boolean;
+};
+
 function ServiceLogoGroup({ hidden = false }: ServiceLogoGroupProps) {
   return (
     <ul className="service-marquee__group" aria-hidden={hidden || undefined}>
@@ -23,9 +27,13 @@ function ServiceLogoGroup({ hidden = false }: ServiceLogoGroupProps) {
   );
 }
 
-export default function ServiceMarquee() {
+export default function ServiceMarquee({ reveal = false }: ServiceMarqueeProps) {
   return (
-    <section className="service-strip" aria-label="AI services available in Portal">
+    <section
+      className="service-strip"
+      aria-label="AI services available in Portal"
+      data-scroll-reveal={reveal ? "strip" : undefined}
+    >
       <div className="service-marquee">
         <div className="service-marquee__track">
           {[0, 1, 2, 3].map((groupIndex) => (

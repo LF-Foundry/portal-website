@@ -3,6 +3,7 @@ import Link from "next/link";
 import DownloadActions from "@/components/DownloadActions";
 import FaqList from "@/components/FaqList";
 import { ArrowIcon, LockIcon } from "@/components/Icons";
+import ScrollReveal from "@/components/ScrollReveal";
 import ServiceMarquee from "@/components/ServiceMarquee";
 import Showcase from "@/components/Showcase";
 import { featuredPortalServices, portalServices } from "@/data/services";
@@ -10,6 +11,7 @@ import { featuredPortalServices, portalServices } from "@/data/services";
 export default function Home() {
   return (
     <main className="home-page">
+      <ScrollReveal />
       <section className="hero-stage" id="home" aria-labelledby="hero-title">
         <div className="hero-copy">
           <h1 id="hero-title">Every AI.<br />One Portal.</h1>
@@ -21,11 +23,16 @@ export default function Home() {
 
       <section className="story" id="features" aria-labelledby="features-title">
         <article className="story-beat story-beat--orchestrate">
-          <div className="story-copy">
+          <div className="story-copy" data-scroll-reveal="copy">
             <h2 id="features-title">Your AI tabs, choreographed.</h2>
             <p>Move between multiple AI services without hunting through a crowded browser. Portal keeps each site close, visible, and ready when you need it.</p>
           </div>
-          <div className="window-map" aria-label="Several AI windows converging into Portal">
+          <div
+            className="window-map"
+            aria-label="Several AI windows converging into Portal"
+            data-scroll-reveal="visual"
+            data-scroll-reveal-delay="90"
+          >
             <div className="window-map__sources">
               {portalServices.slice(0, 3).map((service) => (
                 <div className="mini-window" key={service.name}>
@@ -43,14 +50,19 @@ export default function Home() {
           </div>
         </article>
 
-        <ServiceMarquee />
+        <ServiceMarquee reveal />
 
         <article className="story-beat story-beat--reverse">
-          <div className="story-copy">
+          <div className="story-copy" data-scroll-reveal="copy">
             <h2>The sites you already know.</h2>
             <p>Portal loads the official services directly. Sign in where you normally sign in and use each product’s familiar interface—inside a calmer desktop workflow.</p>
           </div>
-          <div className="site-stack" aria-label="Official AI service interfaces inside Portal">
+          <div
+            className="site-stack"
+            aria-label="Official AI service interfaces inside Portal"
+            data-scroll-reveal="visual"
+            data-scroll-reveal-delay="90"
+          >
             {featuredPortalServices.map((service) => (
               <div key={service.name}>
                 <span className="site-stack__logo" aria-hidden="true">
@@ -63,11 +75,16 @@ export default function Home() {
         </article>
 
         <article className="story-beat story-beat--pin">
-          <div className="story-copy">
+          <div className="story-copy" data-scroll-reveal="copy">
             <h2>There when useful. Quiet when not.</h2>
             <p>Pin Portal to a corner, move it freely, or close it when your work is done. Smooth window and tab motion keeps the tool feeling present without demanding attention.</p>
           </div>
-          <div className="pin-demo" aria-label="Portal pinned neatly to the corner of a desktop">
+          <div
+            className="pin-demo"
+            aria-label="Portal pinned neatly to the corner of a desktop"
+            data-scroll-reveal="visual"
+            data-scroll-reveal-delay="90"
+          >
             <div className="pin-demo__desktop">
               <div className="pin-demo__portal">
                 <div><Image src="/portal-logo.png" alt="" width={28} height={28} /><span>Portal</span><LockIcon /></div>
@@ -80,12 +97,14 @@ export default function Home() {
       </section>
 
       <section className="faq-section" id="faq" aria-labelledby="faq-title">
-        <div>
+        <div data-scroll-reveal="copy">
           <h2 id="faq-title">A few useful answers.</h2>
           <p>Need help installing? The guides walk through both Windows and macOS security prompts.</p>
           <Link className="text-link" href="/help">Open Portal Help <ArrowIcon /></Link>
         </div>
-        <FaqList />
+        <div data-scroll-reveal="copy" data-scroll-reveal-delay="90">
+          <FaqList />
+        </div>
       </section>
     </main>
   );
