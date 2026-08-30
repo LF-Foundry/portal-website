@@ -13,7 +13,50 @@ export default function Showcase() {
       return;
     }
 
-    video.play().catch(() => undefined);
+    const initialScrollY = window.scrollY;
+    let hasUserScrolled = false;
+    let isVisible = false;
+    const syncPlayback = () => {
+      if (hasUserScrolled && isVisible && document.visibilityState === "visible") {
+        video.play().catch(() => undefined);
+        return;
+      }
+
+      video.pause();
+    };
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisible = entry.isIntersecting && entry.intersectionRatio >= 0.8;
+        syncPlayback();
+      },
+      { threshold: [0, 0.8] },
+    );
+    const handleScroll = () => {
+      if (window.scrollY === initialScrollY) {
+        return;
+      }
+
+      hasUserScrolled = true;
+      window.removeEventListener("scroll", handleScroll);
+      syncPlayback();
+    };
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "hidden") {
+        video.pause();
+      }
+    };
+
+    video.pause();
+    observer.observe(video);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      video.pause();
+    };
   }, []);
 
   return (

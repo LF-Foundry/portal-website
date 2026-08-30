@@ -170,12 +170,35 @@ summary {
 }
 
 .home-page {
-  overflow: hidden;
+  overflow: clip;
 }
 
 .hero-stage {
   position: relative;
-  padding: clamp(112px, 9vw, 144px) 18px 72px;
+  padding: 0 18px clamp(88px, 8vw, 128px);
+}
+
+.hero-stage__sticky {
+  position: relative;
+}
+
+.hero-stage__intro {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  align-items: center;
+  padding-top: clamp(112px, 15svh, 156px);
+}
+
+.hero-stage__logo {
+  width: clamp(104px, 10vw, 128px);
+  height: auto;
+  margin-top: clamp(48px, 7svh, 72px);
+  filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.42));
+}
+
+.hero-stage__content {
+  position: relative;
 }
 
 .hero-stage::before {
@@ -188,7 +211,14 @@ summary {
 
 .hero-stage__media {
   width: min(100%, 1680px);
-  margin: clamp(56px, 6vw, 88px) auto 0;
+  margin: clamp(88px, 12svh, 128px) auto 0;
+}
+
+.hero-stage__downloads {
+  display: flex;
+  justify-content: center;
+  width: min(100%, 1680px);
+  margin: 28px auto 0;
 }
 
 .showcase {
@@ -1257,11 +1287,20 @@ summary {
   }
 
   .hero-stage {
-    padding: 94px 12px 56px;
+    padding: 0 12px 72px;
+  }
+
+  .hero-stage__intro {
+    padding: 94px 12px 0;
+  }
+
+  .hero-stage__logo {
+    width: 96px;
+    margin-top: 44px;
   }
 
   .hero-stage__media {
-    margin-top: 40px;
+    margin-top: 72px;
   }
 
   .showcase {
@@ -1288,8 +1327,8 @@ summary {
     width: 100%;
   }
 
-  .hero-copy .download-actions {
-    margin-top: 26px;
+  .hero-stage__downloads {
+    margin-top: 20px;
   }
 
   .download-action {
@@ -1481,6 +1520,99 @@ summary {
   }
 }
 
+@keyframes heroIntroDepart {
+  0%,
+  14% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  52%,
+  100% {
+    opacity: 0;
+    transform: translateY(-48px);
+  }
+}
+
+@keyframes heroContentArrive {
+  0%,
+  48% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  49% {
+    visibility: visible;
+    opacity: 0;
+  }
+
+  82%,
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@supports (animation-timeline: scroll()) {
+  .hero-stage {
+    height: 165svh;
+    padding: 0 18px;
+  }
+
+  .hero-stage__sticky {
+    position: sticky;
+    top: 0;
+    height: 100svh;
+    overflow: clip;
+  }
+
+  .hero-stage__intro,
+  .hero-stage__content {
+    position: absolute;
+    inset: 0;
+    animation-duration: auto;
+    animation-timeline: scroll(root block);
+    animation-range: 0 56svh;
+  }
+
+  .hero-stage__intro {
+    min-height: 0;
+    animation-name: heroIntroDepart;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+  }
+
+  .hero-stage__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(78px, 9svh, 104px) 0 clamp(28px, 4svh, 48px);
+    animation-name: heroContentArrive;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+  }
+
+  .hero-stage__media {
+    width: min(100%, 1680px, calc(238.8svh - 477.6px));
+    margin: 0 auto;
+  }
+
+  @media (max-width: 760px) {
+    .hero-stage {
+      padding: 0 12px;
+    }
+
+    .hero-stage__content {
+      padding: 76px 0 24px;
+    }
+
+    .hero-stage__media {
+      width: min(100%, calc(238.8svh - 430px));
+    }
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -1508,5 +1640,41 @@ summary {
 
   .service-marquee__group[aria-hidden="true"] {
     display: none;
+  }
+
+  .hero-stage {
+    height: auto;
+    padding: 0 clamp(12px, 2.25vw, 18px) clamp(72px, 8vw, 128px);
+  }
+
+  .hero-stage__sticky {
+    position: relative;
+    height: auto;
+    overflow: visible;
+  }
+
+  .hero-stage__intro,
+  .hero-stage__content {
+    position: relative;
+    inset: auto;
+    visibility: visible;
+    opacity: 1;
+    filter: none;
+    transform: none;
+    animation: none !important;
+  }
+
+  .hero-stage__intro {
+    min-height: 100svh;
+  }
+
+  .hero-stage__content {
+    display: block;
+    padding: 0;
+  }
+
+  .hero-stage__media {
+    width: min(100%, 1680px);
+    margin: clamp(72px, 10svh, 112px) auto 0;
   }
 }

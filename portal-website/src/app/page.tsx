@@ -12,12 +12,30 @@ export default function Home() {
     <main className="home-page">
       <ScrollReveal />
       <section className="hero-stage" id="home" aria-labelledby="hero-title">
-        <div className="hero-copy">
-          <h1 id="hero-title">Every AI.<br />One Portal.</h1>
-          <p>Use ChatGPT, Claude, Gemini, and more in one customizable desktop workspace built for Windows and macOS.</p>
-          <DownloadActions compact />
+        <div className="hero-stage__sticky">
+          <div className="hero-stage__intro">
+            <div className="hero-copy">
+              <h1 id="hero-title">Every AI.<br />One Portal.</h1>
+              <p>Use ChatGPT, Claude, Gemini, and more in one customizable desktop workspace built for Windows and macOS.</p>
+            </div>
+            <Image
+              className="hero-stage__logo"
+              src="/portal-logo.png"
+              alt=""
+              width={120}
+              height={120}
+              priority
+            />
+          </div>
+          <div className="hero-stage__content">
+            <div className="hero-stage__media">
+              <Showcase />
+            </div>
+            <div className="hero-stage__downloads">
+              <DownloadActions compact />
+            </div>
+          </div>
         </div>
-        <div className="hero-stage__media"><Showcase /></div>
       </section>
 
       <section className="story" id="features" aria-labelledby="features-title">
