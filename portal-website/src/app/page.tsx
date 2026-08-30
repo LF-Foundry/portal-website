@@ -4,7 +4,6 @@ import DownloadActions from "@/components/DownloadActions";
 import FaqList from "@/components/FaqList";
 import { ArrowIcon, LockIcon } from "@/components/Icons";
 import ScrollReveal from "@/components/ScrollReveal";
-import ServiceMarquee from "@/components/ServiceMarquee";
 import Showcase from "@/components/Showcase";
 import { featuredPortalServices, portalServices } from "@/data/services";
 
@@ -31,7 +30,7 @@ export default function Home() {
             className="window-map"
             aria-label="Several AI windows converging into Portal"
             data-scroll-reveal="visual"
-            data-scroll-reveal-delay="90"
+            data-scroll-reveal-delay="120"
           >
             <div className="window-map__sources">
               {portalServices.slice(0, 3).map((service) => (
@@ -50,8 +49,6 @@ export default function Home() {
           </div>
         </article>
 
-        <ServiceMarquee reveal />
-
         <article className="story-beat story-beat--reverse">
           <div className="story-copy" data-scroll-reveal="copy">
             <h2>The sites you already know.</h2>
@@ -61,7 +58,7 @@ export default function Home() {
             className="site-stack"
             aria-label="Official AI service interfaces inside Portal"
             data-scroll-reveal="visual"
-            data-scroll-reveal-delay="90"
+            data-scroll-reveal-delay="120"
           >
             {featuredPortalServices.map((service) => (
               <div key={service.name}>
@@ -83,7 +80,7 @@ export default function Home() {
             className="pin-demo"
             aria-label="Portal pinned neatly to the corner of a desktop"
             data-scroll-reveal="visual"
-            data-scroll-reveal-delay="90"
+            data-scroll-reveal-delay="120"
           >
             <div className="pin-demo__desktop">
               <div className="pin-demo__portal">
@@ -102,7 +99,7 @@ export default function Home() {
           <p>Need help installing? The guides walk through both Windows and macOS security prompts.</p>
           <Link className="text-link" href="/help">Open Portal Help <ArrowIcon /></Link>
         </div>
-        <div data-scroll-reveal="copy" data-scroll-reveal-delay="90">
+        <div data-scroll-reveal="copy" data-scroll-reveal-delay="120">
           <FaqList />
         </div>
       </section>

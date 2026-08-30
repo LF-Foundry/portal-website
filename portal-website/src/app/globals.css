@@ -373,7 +373,6 @@ summary {
   align-items: center;
   gap: clamp(48px, 8vw, 120px);
   min-height: 720px;
-  border-bottom: 1px solid var(--line);
   padding: clamp(80px, 11vw, 150px) 0;
 }
 
